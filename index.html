@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietcombank Tân Bình Dương Friendship Pickleball 2025 Cup</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <meta property="og:image" content="https://huggingface.co/spaces/Tam1605/pickleball-frenzy-cup-2025/resolve/main/images/pickleball%20van%20ph%C3%BAc.jpg">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --bs-primary: #8B5A2B;
+            --bs-primary-rgb: 139, 90, 43;
+            --bs-secondary: #5D4037;
+            --bs-light: #F8F9FA;
+            --bs-dark: #343A40;
+            --bs-font-sans-serif: 'Montserrat', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--bs-font-sans-serif); background-color: #fdfdfd; }
+
+        .hero-section {
+            background: linear-gradient(rgba(20, 15, 10, 0.65), rgba(20, 15, 10, 0.65)), url('https://huggingface.co/spaces/Tam1605/pickleball-frenzy-cup-2025/resolve/main/images/pickleball%20van%20ph%C3%BAc.jpg');
+            background-size: cover; background-position: center; color: white; position: relative;
+        }
+        .hero-content h1 { text-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        .brown-gradient-text {
+            background: linear-gradient(135deg, #6d4620 0%, #a46f39 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;
+        }
+        .btn { transition: all 0.3s ease; font-weight: 600; padding: 0.75rem 2rem; }
+        .btn-primary { background-color: var(--bs-primary); border-color: var(--bs-primary); }
+        .btn-primary:hover {
+            background-color: #6d4620; border-color: #6d4620; transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(var(--bs-primary-rgb), 0.3);
+        }
+        .btn-outline-light { border-width: 2px; }
+        .btn-outline-light:hover {
+            background-color: white; color: var(--bs-primary); transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+        }
+        .section-title { font-weight: 800; margin-bottom: 4rem; position: relative; padding-bottom: 1rem; }
+        .section-title::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 4px; background-color: var(--bs-primary); border-radius: 2px;
+        }
+        .custom-card {
+            border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.07); transition: all 0.3s ease;
+        }
+        .custom-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .navbar-brand img { max-height: 50px; }
+        .nav-link { font-weight: 600; transition: color 0.3s; }
+        .nav-link:hover { color: var(--bs-primary) !important; }
+        .timeline { position: relative; padding: 2rem 0; }
+        .timeline::before {
+            content: ''; position: absolute; top: 0; left: 1.5rem; height: 100%; width: 3px;
+            background: #e9ecef; border-radius: 2px;
+        }
+        .timeline-item { position: relative; margin-bottom: 2.5rem; padding-left: 4rem; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-icon {
+            position: absolute; left: 0; top: 0; width: 3rem; height: 3rem; background-color: var(--bs-primary);
+            color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            border: 4px solid #fff; box-shadow: 0 0 0 3px var(--bs-primary);
+        }
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+        .info-card {
+            background-color: #fff; border-radius: 1rem; padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07); transition: all 0.3s ease;
+        }
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .info-icon {
+            font-size: 2.5rem; color: var(--bs-primary); margin-bottom: 1rem;
+        }
+        /* New Styles for the Info Section */
+        .info-card-alt {
+            background-color: #FFFBF2;
+            border: 1px solid #FBEFDC;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: left;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .info-card-alt:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .card-icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #FBEFDC;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            color: var(--bs-primary);
+        }
+        .info-card-alt h5 {
+            color: var(--bs-secondary);
+        }
+        .info-card-alt ul {
+            padding-left: 1rem;
+        }
+        .note-box {
+            background-color: #FDF8E8;
+            border-left: 4px solid #FAD78C;
+            padding: 0.75rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        /* New Styles for Rules Section */
+        .rules-card {
+            background-color: #FFFBF2;
+            border: 1px solid #FBEFDC;
+            border-radius: 1rem;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+         .rules-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .rules-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .rules-number {
+            width: 40px;
+            height: 40px;
+            background-color: #FBEFDC;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bs-primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .rules-title {
+            font-weight: 700;
+            color: var(--bs-secondary);
+            font-size: 1.25rem;
+        }
+        .rules-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .rules-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        .rules-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #FAD78C;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        .important-note-box {
+            background-color: #FFFBF2;
+            border: 1px solid #FBEFDC;
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+        }
+        .important-note-box i {
+            font-size: 2rem;
+            color: var(--bs-primary);
+            margin-right: 1.5rem;
+        }
+
+        /* Mobile Optimization Styles */
+        @media (max-width: 767.98px) {
+            .hero-section {
+                min-height: 50vh; /* Adjust hero height for mobile */
+            }
+            .hero-content h1 {
+                font-size: 2.5rem; /* Reduce font size for h1 on mobile */
+            }
+            .section-title {
+                font-size: 1.75rem; /* Reduce font size for section titles on mobile */
+                margin-bottom: 3rem;
+            }
+            .timeline::before {
+                left: 1rem; /* Adjust timeline line position */
+            }
+            .timeline-item {
+                padding-left: 3rem; /* Reduce padding for timeline items */
+                margin-bottom: 2rem;
+            }
+            .timeline-icon {
+                width: 2.5rem; /* Smaller timeline icons */
+                height: 2.5rem;
+            }
+            .timeline-icon svg {
+                width: 1rem;
+                height: 1rem;
+            }
+            .rules-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .rules-number {
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
+            .important-note-box {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .important-note-box i {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://cdn.save.moe/b/6kMxZn.png" alt="Vietcombank Logo" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Mục Đích</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#info">Thông Tin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Lịch Trình</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rules">Điều Lệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#register">Đăng Ký</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#venue">Địa Điểm</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section py-5 d-flex align-items-center" style="min-height: 70vh;">
+        <div class="container text-center hero-content">
+            <h1 class="display-3 fw-bold reveal">VIETCOMBANK TÂN BÌNH DƯƠNG FRIENDSHIP PICKLEBALL 2025 CUP</h1>
+            <p class="lead fs-4 mb-4 reveal" style="transition-delay: 0.2s;">Chào mừng kỷ niệm 19 năm thành lập Chi nhánh Tân Bình Dương</p>
+            <div class="reveal" style="transition-delay: 0.4s;">
+                <a href="#about" class="btn btn-outline-light btn-lg">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center section-title brown-gradient-text reveal">Mục Đích & Ý Nghĩa</h2>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 reveal">
+                        <img src="https://cdn.save.moe/b/hJablv.png" alt="Kỷ niệm 19 năm Vietcombank Tân Bình Dương" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                    <div class="col-lg-6 reveal" style="transition-delay: 0.2s;">
+                        <h3 class="fw-bold mb-3" style="color: var(--bs-primary);">Kỷ niệm 19 năm thành lập (28/11/2006 - 28/11/2025)</h3>
+                        <p class="text-muted">Giải đấu được tổ chức để nhiệt liệt chào mừng kỷ niệm 19 năm thành lập Ngân hàng TMCP Ngoại thương Việt Nam – Chi nhánh Tân Bình Dương.</p>
+                        <p class="text-muted">Đây là dịp để tăng cường sự giao lưu, đoàn kết, và học tập kinh nghiệm giữa các chi nhánh Vietcombank, góp phần nâng cao năng suất lao động và hoàn thành xuất sắc nhiệm vụ được giao.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Info Section -->
+        <section id="info" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center section-title brown-gradient-text reveal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="d-inline-block me-2" style="margin-top: -5px; color: var(--bs-primary);"><path d="M21.29,2.29a1,1,0,0,0-1.42,0l-3,3L15.45,4A1,1,0,0,0,14,5.45l1.42,1.42-1.5,1.5-3-3A1,1,0,0,0,9.55,6L8.14,7.42l-1.5-1.5-3,3a1,1,0,0,0,0,1.42l3,3L4,16.55A1,1,0,0,0,5.45,18l1.42-1.42,1.5,1.5-3,3a1,1,0,0,0,1.42,1.42l3-3L11.23,21a1,1,0,0,0,1.42,0l10.35-10.34a1.64,1.64,0,0,0,0-2.32Z"/></svg>
+                    Thông Tin Giải Đấu
+                </h2>
+                <div class="row g-4 justify-content-center">
+                    <!-- Card 1: Time & Location -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="info-card-alt">
+                            <div class="card-icon-circle"><i data-feather="calendar"></i></div>
+                            <h5 class="text-center fw-bold mb-4">Thời gian - Địa điểm</h5>
+                            <p class="text-muted mb-2"><strong><i data-feather="clock" class="me-2" style="width:16px;"></i>Khai mạc và thi đấu:</strong></p>
+                            <p class="text-muted ps-4">07h30 – 11h30<br>Thứ Bảy, 01/11/2025</p>
+                            <p class="text-muted mb-2"><strong><i data-feather="map-pin" class="me-2" style="width:16px;"></i>Địa điểm:</strong></p>
+                            <p class="text-muted ps-4">Cụm sân Pickleball Vạn Phúc City<br>140 đường 16, KDC Vạn Phúc, Thủ Đức, TPHCM</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Participants -->
+                    <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.2s;">
+                         <div class="info-card-alt">
+                            <div class="card-icon-circle"><i data-feather="users"></i></div>
+                            <h5 class="text-center fw-bold mb-4">Đối tượng tham gia</h5>
+                            <p class="text-muted">Đoàn viên, người lao động các Chi nhánh:</p>
+                            <ul class="text-muted small">
+                                <li>Chi nhánh Tân Bình Dương</li>
+                                <li>Chi nhánh Bình Dương</li>
+                                <li>Chi nhánh Nam Bình Dương</li>
+                                <li>Chi nhánh Bắc Bình Dương</li>
+                                <li>Chi nhánh Đông Bình Dương</li>
+                                <li>Ngân hàng Nhà nước KV 2</li>
+                                <li>Chi nhánh Bình Phước</li>
+                                <li>Chi nhánh Phú Mỹ</li>
+                                <li>Chi nhánh Đồng Nai</li>
+                                <li>Chi nhánh Tây Sài Gòn</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Competition Content -->
+                    <div class="col-lg-4 col-md-6 reveal" style="transition-delay: 0.4s;">
+                        <div class="info-card-alt">
+                            <div class="card-icon-circle"><i data-feather="award"></i></div>
+                            <h5 class="text-center fw-bold mb-4">Nội dung thi đấu</h5>
+                            <p class="text-muted"><strong>Số lượng VĐV:</strong><br>Mỗi Chi nhánh: tối đa 10 VĐV (05 đôi)</p>
+                            <p class="text-muted mt-3"><strong>02 nội dung:</strong></p>
+                            <ul class="text-muted small">
+                                <li>Đôi nam</li>
+                                <li>Đôi nam nữ</li>
+                            </ul>
+                            <div class="note-box">
+                                <strong>Lưu ý:</strong> VĐV chỉ được tham gia 01 nội dung thi đấu.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Schedule Section -->
+        <section id="schedule" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center section-title brown-gradient-text reveal">Lịch Trình Sự Kiện</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5 reveal">
+                             <p class="h4 text-primary fw-bold">Thứ Bảy, 01/11/2025</p>
+                             <h3 class="h2 fw-bold text-secondary">Từ 07:30 - 11:30</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item reveal"><div class="timeline-icon"><i data-feather="log-in"></i></div><h5 class="fw-bold text-primary mb-0">1. Đón khách, ổn định tổ chức</h5></div>
+                            <div class="timeline-item reveal"><div class="timeline-icon"><i data-feather="gift"></i></div><h5 class="fw-bold text-primary mb-0">2. Lễ khai mạc</h5></div>
+                            <div class="timeline-item reveal"><div class="timeline-icon"><i data-feather="flag"></i></div><h5 class="fw-bold text-primary mb-0">3. Tặng hoa & cờ lưu niệm</h5></div>
+                            <div class="timeline-item reveal"><div class="timeline-icon"><i data-feather="play-circle"></i></div><h5 class="fw-bold text-primary mb-0">4. Tổ chức thi đấu</h5></div>
+                            <div class="timeline-item reveal"><div class="timeline-icon"><i data-feather="award"></i></div><h5 class="fw-bold text-primary mb-0">5. Bế mạc & trao giải</h5></div>
+                            <div class="timeline-item reveal"><div class="timeline-icon"><i data-feather="coffee"></i></div><h5 class="fw-bold text-primary mb-0">6. Tiệc thân mật</h5></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section id="rules" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center section-title brown-gradient-text reveal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="d-inline-block me-2" style="margin-top: -5px; color: var(--bs-primary);"><path d="M21.29,2.29a1,1,0,0,0-1.42,0l-3,3L15.45,4A1,1,0,0,0,14,5.45l1.42,1.42-1.5,1.5-3-3A1,1,0,0,0,9.55,6L8.14,7.42l-1.5-1.5-3,3a1,1,0,0,0,0,1.42l3,3L4,16.55A1,1,0,0,0,5.45,18l1.42-1.42,1.5,1.5-3,3a1,1,0,0,0,1.42,1.42l3-3L11.23,21a1,1,0,0,0,1.42,0l10.35-10.34a1.64,1.64,0,0,0,0-2.32Z"/></svg>
+                    Điều Lệ Giải Đấu
+                </h2>
+                 <div class="row g-4">
+                    <!-- Card 1: Thể thức thi đấu -->
+                    <div class="col-lg-6 reveal">
+                        <div class="rules-card">
+                            <div class="rules-header">
+                                <div class="rules-number">1</div>
+                                <h3 class="rules-title">Thể thức thi đấu</h3>
+                            </div>
+                            <ul class="rules-list">
+                                <li><strong>Vòng bảng:</strong> Các VĐV/cặp VĐV chia vào các bảng đấu, thi đấu vòng tròn 1 lượt.</li>
+                                <li><strong>Các trận vòng bảng:</strong> 01 hiệp 11 điểm, 06 điểm đổi sân.</li>
+                                <li><strong>Vòng tứ kết:</strong> 01 hiệp 11 điểm, 06 điểm đổi sân.</li>
+                                <li><strong>Bán kết và tranh Hạng 3:</strong> 01 hiệp 15 điểm, 08 điểm đổi sân.</li>
+                                <li><strong>Chung kết:</strong> 01 hiệp 15 điểm, 08 điểm đổi sân, nếu 14-14 thì thắng cách biệt 2 điểm, tối đa 21 điểm.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card 2: Tính điểm và xếp hạng -->
+                    <div class="col-lg-6 reveal" style="transition-delay: 0.1s;">
+                        <div class="rules-card">
+                            <div class="rules-header">
+                                <div class="rules-number">2</div>
+                                <h3 class="rules-title">Tính điểm và xếp hạng</h3>
+                            </div>
+                             <ul class="rules-list">
+                                <li><strong>Thắng:</strong> 01 điểm, <strong>Thua:</strong> 0 điểm.</li>
+                                <li><strong>Xếp hạng theo thứ tự:</strong> Điểm số → Hiệu số → Đối đầu trực tiếp → Bốc thăm.</li>
+                                <li>Nhất bảng và Nhì bảng vào vòng tiếp theo.</li>
+                                <li><strong>Time-out:</strong> 01 lần/hiệp (01 phút), Chung kết: 02 lần/hiệp.</li>
+                                <li><strong>Medical time-out:</strong> 01 lần/trận (10 phút).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card 3: Luật thi đấu -->
+                    <div class="col-lg-6 reveal" style="transition-delay: 0.2s;">
+                        <div class="rules-card">
+                             <div class="rules-header">
+                                <div class="rules-number">3</div>
+                                <h3 class="rules-title">Luật thi đấu</h3>
+                            </div>
+                             <ul class="rules-list">
+                                <li>Áp dụng tạm thời Luật thi đấu Pickleball USA tại Việt Nam.</li>
+                                <li>Giao bóng chạm lưới vào ô quy định vẫn tiếp tục thi đấu.</li>
+                                <li>Trong giao bóng chân không được dẫm vạch trước khi bóng rời vợt.</li>
+                                <li>Chân không được giẫm vạch bếp hoặc di chuyển vào khu vực bếp khi đánh vô lê.</li>
+                                <li>Khi đánh bóng vợt hoặc bất kỳ bộ phận nào của cơ thể không được chạm lưới và cột lưới.</li>
+                                <li>Bóng thi đấu màu xanh neon, VĐV không được mặc trang phục màu tương tự.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card 4: Kỷ luật & khiếu nại -->
+                    <div class="col-lg-6 reveal" style="transition-delay: 0.3s;">
+                        <div class="rules-card">
+                             <div class="rules-header">
+                                <div class="rules-number">4</div>
+                                <h3 class="rules-title">Kỷ luật & khiếu nại</h3>
+                            </div>
+                             <ul class="rules-list">
+                                <li>BTC áp dụng các hình thức kỷ luật từ nhắc nhở, cảnh cáo đến truất quyền thi đấu.</li>
+                                <li>Chỉ có quyền khiếu nại Trọng tài về lỗi kỹ thuật trong vòng 10 phút sau trận đấu.</li>
+                                <li>Quyết định của Trưởng ban trọng tài hoặc BTC là quyết định cuối cùng.</li>
+                                <li>Các cá nhân và người có liên quan phải tuyệt đối chấp hành quyết định của BTC.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Card 5: Quy định chung -->
+                    <div class="col-lg-12 reveal" style="transition-delay: 0.4s;">
+                        <div class="rules-card">
+                             <div class="rules-header">
+                                <div class="rules-number">5</div>
+                                <h3 class="rules-title">Quy định chung</h3>
+                            </div>
+                             <ul class="rules-list">
+                                <li>VĐV có mặt điểm danh tại Check-in tối thiểu 30 phút trước giờ thi đấu.</li>
+                                <li>Có mặt tại sân đấu được chỉ định 15 phút trước giờ quy định.</li>
+                                <li>Điểm danh trễ 10 phút sẽ bị xử thua 0-11.</li>
+                                <li>Không đủ số lượng VĐV sẽ bị xử thua hiệp đấu với tỉ số 0-11.</li>
+                                <li>Mọi hành động phi thể thao sẽ bị BTC truất quyền thi đấu.</li>
+                                <li>BTC có quyền thay đổi thể thức và lịch thi đấu khi cần thiết.</li>
+                            </ul>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="mt-4 reveal">
+                    <div class="important-note-box">
+                        <i data-feather="alert-circle"></i>
+                        <div>
+                            <h5 class="fw-bold text-primary mb-1">Lưu ý quan trọng</h5>
+                            <p class="text-muted mb-0">Ban tổ chức có quyền thay đổi, bổ sung điều lệ khi cần thiết và sẽ thông báo đến các vận động viên trước khi giải đấu diễn ra. Mọi thắc mắc về điều lệ, vui lòng liên hệ ban tổ chức để được giải đáp chi tiết. Quyết định của trọng tài và BTC là quyết định cuối cùng.</p>
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="text-center mt-5 reveal">
+                    <a href="https://drive.google.com/drive/folders/1jwjylW1DUWkyTCNETXBx6EhC9SBgyZtX" class="btn btn-primary btn-lg" target="_blank">Tải Điều Lệ Đầy Đủ</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Registration Section -->
+        <section id="register" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center section-title brown-gradient-text reveal">Thông Tin Đăng Ký</h2>
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8 reveal">
+                        <div class="custom-card border border-primary p-4 p-lg-5 rounded-4">
+                            <h3 class="fw-bold text-primary">Hạn Chót Đăng Ký: 15/10/2025</h3>
+                            <p class="text-muted fs-5 my-4">Danh sách VĐV tham gia phải có chữ ký của Ban lãnh đạo Chi nhánh, được đóng dấu và gửi về Ban tổ chức đúng hạn.</p>
+                            <h5 class="fw-bold">Cán bộ đầu mối nhận thông tin:</h5>
+                            <p class="fs-5 mb-0">Anh <strong>Phạm Minh Tiến</strong> - Phòng Hành chính Nhân sự</p>
+                            <p class="fs-5">Email: <strong>tienpm.tbd</strong> | Điện thoại: <strong>0974.82.1992</strong></p>
+                            <a href="https://drive.google.com/drive/folders/1jwjylW1DUWkyTCNETXBx6EhC9SBgyZtX" class="btn btn-primary mt-4" target="_blank">
+                                <i data-feather="download" class="me-2" style="width:16px;"></i> Tải mẫu đăng ký
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Section -->
+        <section id="venue" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center section-title brown-gradient-text reveal">Địa Điểm Tổ Chức</h2>
+                <div class="row g-4 justify-content-center">
+                    <!-- Competition Venue -->
+                    <div class="col-lg-6 reveal">
+                        <div class="card h-100 custom-card rounded-4 overflow-hidden">
+                            <div class="card-body p-4 text-center">
+                                <h4 class="card-title fw-bold text-primary">Địa điểm thi đấu</h4>
+                                <p class="text-muted mb-3">
+                                    <i data-feather="map-pin" class="me-2" style="width:16px; vertical-align: text-bottom;"></i>
+                                    Cụm sân Pickleball Vạn Phúc City, 140 đường 16, KDC Vạn Phúc, Thủ Đức, TPHCM
+                                </p>
+                            </div>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.601072947973!2d106.70440027541855!3d10.841809957983571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529002d8f3bfd%3A0xe8deb5e88c019f2c!2zUGlja2xlYmFsbCBW4bqhbiBQaMO6YyBDaXR5!5e0!3m2!1svi!2s!4v1760119997057!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gala Dinner Venue -->
+                    <div class="col-lg-6 reveal" style="transition-delay: 0.2s;">
+                        <div class="card h-100 custom-card rounded-4 overflow-hidden">
+                            <div class="card-body p-4 text-center">
+                                <h4 class="card-title fw-bold text-primary">Tiệc thân mật</h4>
+                                <p class="text-muted mb-3">
+                                    <i data-feather="map-pin" class="me-2" style="width:16px; vertical-align: text-bottom;"></i>
+                                    Trung tâm Hội nghị Le Jardin, 195 Quốc Lộ 13, P. Hiệp Bình, TP. Hồ Chí Minh
+                                </p>
+                            </div>
+                            <div class="ratio ratio-16x9">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.703166695051!2d106.71122587541848!3d10.834012758128107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527e20c7bb9e1%3A0x1cb3a4c2be7255b5!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgJiBUaeG7h2MgQ8aw4bubaSBMZSBKYXJkaW4!5e0!3m2!1svi!2s!4v1760169848115!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-white py-4" style="background-color: var(--bs-secondary);">
+        <div class="container text-center">
+            <p class="mb-1 fw-bold">NGÂN HÀNG TMCP NGOẠI THƯƠNG VIỆT NAM - CHI NHÁNH TÂN BÌNH DƯƠNG</p>
+            <p class="mb-0 small opacity-75">© 2025 Vietcombank Tân Bình Dương. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Scroll Animation Logic
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
